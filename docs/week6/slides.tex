@@ -1,13 +1,26 @@
 \documentclass{beamer}
 \usepackage[latin1]{inputenc}
+\usepackage[absolute,overlay]{textpos} 
 \usetheme{Warsaw}
+
+\expandafter\def\expandafter\insertshorttitle\expandafter{%\insertshorttitle\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
 
 \title[TagFS]{A tag based filesystem}
 \author{Catalina Macalet, Eugen Hristev, Mihai Dinu, Sorin Dumitru}
 \institute{Politehnic University of Bucharest}
 \date{Nov 11, 2010}
-
 \begin{document}
+
+%add cs logo
+%\pgfdeclareimage{cs-logo}{cs.png}
+%\setlength{\TPHorizModule}{1mm} 
+%\setlength{\TPVertModule}{1mm} 
+%\newcommand{\MyLogo}{% 
+%\begin{pgfpicture}(5 cm,2 cm) 
+%  \pgfuseimage{cs-logo} 
+%\end{pgfpicture} 
+%} 
 
 \begin{frame}
   \titlepage
@@ -15,13 +28,14 @@
 
 \section{Introduction}
 
-\begin{frame}{Introduction}
+\begin{frame}
+  \includegraphics[scale=0.8]{art/schema.png}
 \end{frame}
 
 \section{Architecture}
 
 \begin{frame}
-  \includegraphics[scale=0.6]{art/archall.pdf}
+  \includegraphics[scale=0.5]{art/archall.pdf}
 \end{frame}
 
 \begin{frame}
@@ -31,7 +45,7 @@
 \section{Related work}
 
 \begin{frame}
-  
+%\MyLogo  
   \begin{itemize}
   \item TagFS: Bringing Semantic Metadata to the Filesystem
     \begin{itemize}
@@ -50,18 +64,19 @@
 
 \section{Current status}
 
-\begin{frame}{Current status}
+\begin{frame}
   \begin{itemize}
   \item Studied related work
   \item Stated expected behaviour
     \begin{itemize}
-    \item Picture or a couple of cmds outpur
+        \item Add, remove tags
+        \item Find files based on tags
     \end{itemize}
   \item Identified pros and cons for the two possible solutions
-    \begin{itemize}
-    \item maybe listing a couple of + - for every solution,maybe we
-      can make 2 slides out of this
-    \end{itemize}
+    %\begin{itemize}
+    %\item maybe listing a couple of + - for every solution,maybe we
+    %  can make 2 slides out of this
+    %\end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -69,7 +84,7 @@
 
 \begin{frame}
   \begin{itemize}
-  \item linux 2.6.35
+  \item Linux 2.6.35
   \item GCC 4.4.5:
   \item FUSE  Filesystem in USErspace
 	\begin{itemize}
@@ -88,8 +103,28 @@
   \begin{itemize}
     \item Determine if VFS implementation is feasible
     \item Data organization
+    \item Search methods
     \item Start coding
   \end{itemize}
 \end{frame}
 
+\section{Keywords}
+\begin{frame}{Thank you!} 
+\begin{columns}
+	\begin{column}[l]{0.5\textwidth}
+	  \begin{itemize}
+        \item Filesystem
+        \item Tags
+        \item Inode
+	  \end{itemize}
+	\end{column}
+	\begin{column}[c]{0.5\textwidth}
+	  \begin{itemize}
+        \item FUSE 
+        \item VFS
+	  \end{itemize}    
+	\end{column}
+      \end{columns}
+
+\end{frame}
 \end{document}
