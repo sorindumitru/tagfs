@@ -1,0 +1,2 @@
+EXTRA_CFLAGS=-g -I../include
+obj-m=tagfs_ioctl.o
