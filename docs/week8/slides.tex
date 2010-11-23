@@ -1,0 +1,52 @@
+\documentclass{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage[absolute,overlay]{textpos} 
+\usetheme{Warsaw}
+
+\expandafter\def\expandafter\insertshorttitle\expandafter{%\insertshorttitle\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+
+\title[TagFS]{A tag based filesystem}
+\author{Catalina Macalet, Eugen Hristev, Mihai Dinu, Sorin Dumitru}
+\institute{Politehnic University of Bucharest}
+\date{Nov 11, 2010}
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Status}
+
+\begin{frame}
+\begin{itemize}
+	\item Started work on the kernel module
+	\begin{itemize}
+		\item Finished storage module
+		\item Keeps all information in memory(for now)
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+	\item Module for testing
+	\begin{itemize}
+		\item Can create fake files
+		\item Add/Delete tags on them
+		\item Search by tag
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{Schedule}
+
+\begin{frame}
+  \begin{itemize}
+    \item 5-12-2010 Finish kernel module with persistent storage
+    \item 12-12-2010 Finish hook framework
+    \item In parallel do userspace tools
+  \end{itemize}
+\end{frame}
+
+\end{document}
