@@ -1,3 +1,5 @@
-\beamer@endinputifotherversion {3.10pt}
-\beamer@sectionintoc {1}{Status}{2}{0}{1}
-\beamer@sectionintoc {2}{Schedule}{4}{0}{2}
+\beamer@endinputifotherversion {3.07pt}
+\beamer@sectionintoc {1}{Where we left off}{2}{0}{1}
+\beamer@sectionintoc {2}{Status}{3}{0}{2}
+\beamer@sectionintoc {3}{Issues}{5}{0}{3}
+\beamer@sectionintoc {4}{Schedule}{6}{0}{4}
