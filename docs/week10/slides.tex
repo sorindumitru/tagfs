@@ -32,7 +32,7 @@
     \begin{itemize}
         \item{Do as few changes as possible}
         \item{Filename separated from tags by ":"}
-        \item{Limit the length of filename and/or tags to MAXPATH}
+        \item{Limit the length of filename and/or tags to MAX$\_$PATH}
         \item{Define tagfs start points in file system hierarchy}
         \item{Store the tagfs metadata files in RAM}
     \end{itemize}
@@ -45,7 +45,7 @@
         \item \textcolor{red}{touch filename:tag1:tag2:...}
             \begin{itemize}
                 \item{create file with tags (add metadata in tagfs structure)}
-                \item{vfs function: dosysopen}
+                \item{vfs function: do$\_$sys$\_$open}
             \end{itemize}
         \item \textcolor{red}{mv}
             \begin{itemize}
