@@ -1,1 +1,0 @@
-cmd_/home/catalina/Documents/tagfs/src/tagfs_ioctl.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-2.6.32-24-generic/scripts/module-common.lds --build-id -o /home/catalina/Documents/tagfs/src/tagfs_ioctl.ko /home/catalina/Documents/tagfs/src/tagfs_ioctl.o /home/catalina/Documents/tagfs/src/tagfs_ioctl.mod.o
