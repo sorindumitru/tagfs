@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.07pt}
+\beamer@sectionintoc {1}{Choices}{2}{0}{1}
+\beamer@sectionintoc {2}{Operations}{4}{0}{2}
+\beamer@sectionintoc {3}{Status}{6}{0}{3}

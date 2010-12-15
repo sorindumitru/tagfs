@@ -1,0 +1,47 @@
+1. as few changes as possible so that tagfs-free fs work the same
+
+2. start point in fs hieracrhy for tagfs
+    *) userspace tool for making a new entry point
+    *) hash with defined entry-points
+    + avoid looking for inode from vfs_functions,  
+    + decide whether the file is part of a tagfs-based fs
+    - memory issue
+
+3. usecases:
+    a. touch
+        - vfs function: do_sys_open
+        - add file and tag in tagfs structure
+    b. mv 
+        - vfs function: rename
+        - change mapping in tagfs structure
+    c. cp
+        -vfs function: unlink
+        -make changes in tagfs structure 
+    d. ls
+        vfs func: get_dents
+        -iterate through tagfs structure
+------------------------------------------
+Userspace tool:
+    e. tag -l filename
+        -fcntl call
+    f. tag -a tag1:tag2... filename
+        -fcntl call
+    g. tag -d tag1:tag2... filename
+        -fcntl call    
+==========================================
+
+Current status:
+    - tagfs structure (short description) w\ funct for: 
+        * add/remove/search
+        TODO: more testing
+    - userspace tool
+        TODO: do kernelspace part
+    - hacks in vfs 
+        
+==========================================
+
+Assumptions: 
+    1. Keep tagfs metadata files in memory
+    2. filename+tags+":" < MAX_PATH
+    3. a filename cannot have ":" in its name
+    
