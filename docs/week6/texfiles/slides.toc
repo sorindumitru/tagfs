@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.07pt}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Architecture}{3}{0}{2}
+\beamer@sectionintoc {3}{Related work}{5}{0}{3}
+\beamer@sectionintoc {4}{Current status}{6}{0}{4}
+\beamer@sectionintoc {5}{Employed Technologies}{7}{0}{5}
+\beamer@sectionintoc {6}{Short term planning}{8}{0}{6}
+\beamer@sectionintoc {7}{Keywords}{9}{0}{7}
