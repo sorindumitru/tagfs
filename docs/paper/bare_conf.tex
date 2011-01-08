@@ -1,5 +1,12 @@
-
-%% bare_conf.tex
+\newcommand{\fig}[4][]{
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[#1]{#2}
+		\caption{#4 \label{#3}}
+    \end{center}
+\end{figure}
+}
+% bare_conf.tex
 %% V1.3
 %% 2007/01/11
 %% by Michael Shell
@@ -126,6 +133,9 @@
 
 % *** GRAPHICS RELATED PACKAGES ***
 %
+%\usepackage[absolute,overlay]{textpos}
+\usepackage[pdftex]{graphicx}
+\usepackage{url}
 \ifCLASSINFOpdf
   % \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
@@ -509,9 +519,11 @@ such as comments and tags.
 existing kernel implementations for tag based filesystems.
 
 \section{Tagfs}
-
+    TagFS 
+    \fig[scale=0.5]{figs/hierarchy.pdf}{img:hierarchy}{TagFS}
+    \fig[scale=0.5]{figs/archall.pdf}{img:arch}{TagFS architecture}
 A short description of how tagfs works.
-
+    
 \subsection{Storage}
 
 \subsection{VFS Hooks}
@@ -533,6 +545,7 @@ if properly used. However more tests should be done regarding this problem.
 	\bibitem SStephan Bloehdorn and Max Volkel,Tagfs-tag semantics for hierarchical file systems, 
 	\bibitem YYuan-Liang Tai1, Shang-Rong Tsai, Guang-Hung Huang, Chia-Ming Lee,
 Lian-Jou Tsai, Kuo-Feng Ssu and Shou-Jen Wey, A Label-Based File System
+    \bibitem NNepomuk-KDE \url{http://nepomuk.kde.org/}
 \end{thebibliography}
 
 % that's all folks
