@@ -361,22 +361,22 @@
 \author{\IEEEauthorblockN{Catalina Macalet}
 \IEEEauthorblockA{Computer Science Department\\
 Politehnica University of Bucharest\\
-Email: catalina.macalet@cs.pub.ro}
+Email: catalina.macalet@cti.pub.ro}
 \and
 \IEEEauthorblockN{Eugen Hristev}
 \IEEEauthorblockA{Computer Science Department\\
 Politehnica University of Bucharest\\
-Email: eugen.hristev@cs.pub.ro}
+Email: eugen.hristev@cti.pub.ro}
 \and
 \IEEEauthorblockN{Mihai Dinu}
 \IEEEauthorblockA{Computer Science Department\\
 Politehnica University of Bucharest\\
-Email: mihai.dinu@cs.pub.ro}
+Email: mihai.dinu@cti.pub.ro}
 \and
 \IEEEauthorblockN{Sorin Dumitru}
 \IEEEauthorblockA{Computer Science Department\\
 Politehnica University of Bucharest\\
-Email: sorin.dumitru@cs.pub.ro}}
+Email: sorin.dumitru@cti.pub.ro}}
 
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
@@ -449,15 +449,29 @@ lulu
 
 
 \section{Introduction}
-\subsection{Ar trebui sa imi verifice cineva gramatica, exprimarea bla bla. }
 In most operating systems the files are hierarchically organized. 
-This means there usually is a starting point, or parent directory. 
-In Windows based systems there are multiple starting points which are 
-based on the physical hard drive partitions. In Unix flavours systems, 
+This means that there usually is a starting point, or parent directory. 
+In Windows based systems there are multiple starting points 
+based on the physical hard drive partitions. In Unix-like systems, 
 there is a single root drive with different mount points available for users
-to be able to add or remove subtrees from different drives, partitions, etc. 
+to add or remove subtrees from different drives, partitions, etc. 
+In these filesystems a user organizes related data by storing it in the same 
+folder but say that a user, Bob, has two separated folders one for storing
+photos taken in the mountains (Mountain-pics) and one for storing photos in which 
+a certain person appears (Alice-pics). Two questions arise, one, where should 
+Bob store a picture taken in the mountains in which Alice appears and two, how 
+could Bob find the pictures taken in the mountains in which Alice appears. For 
+current
+filesystems the answer to the first question might be storing the photo in either
+folder and in the second one creating a link to this photo or, store it in both
+folders. The answer to the second one could be naming the photo in such a way
+that retrieving them based on the previously stated criteria would work. 
 TagFS file system aims to bring a different approach, based on tags rather than 
 hierarchical system that is rooted for a long time in modern operating system. 
+For the above example, for a TagFS filesystem the answer to both questions would
+be adding tags to photos ($<$mountains$><$Alice$>$) and then search for files that 
+contain these tags. The problem of where to store a specific photo 
+ would not be that important anymore. 
 A pure tag file system is difficult to implement starting from zero, so we tried
 to adapt the current file system in Linux to support tags and see how the two 
 systems can coexist on an end-user machine. 
