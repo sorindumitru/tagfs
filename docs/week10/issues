@@ -15,9 +15,9 @@
         - vfs function: rename
         - change mapping in tagfs structure
     c. cp
-        -vfs function: unlink
+        -vfs function, unlink
         -make changes in tagfs structure 
-    d. ls
+    d. ls   
         vfs func: get_dents
         -iterate through tagfs structure
 ------------------------------------------
@@ -27,7 +27,7 @@ Userspace tool:
     f. tag -a tag1:tag2... filename
         -fcntl call
     g. tag -d tag1:tag2... filename
-        -fcntl call    
+        -fcntl call     
 ==========================================
 
 Current status:
