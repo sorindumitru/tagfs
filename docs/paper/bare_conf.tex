@@ -449,14 +449,34 @@ lulu
 
 
 \section{Introduction}
+\subsection{Ar trebui sa imi verifice cineva gramatica, exprimarea bla bla. }
+In most operating systems the files are hierarchically organized. 
+This means there usually is a starting point, or parent directory. 
+In Windows based systems there are multiple starting points which are 
+based on the physical hard drive partitions. In Unix flavours systems, 
+there is a single root drive with different mount points available for users
+to be able to add or remove subtrees from different drives, partitions, etc. 
+TagFS file system aims to bring a different approach, based on tags rather than 
+hierarchical system that is rooted for a long time in modern operating system. 
+A pure tag file system is difficult to implement starting from zero, so we tried
+to adapt the current file system in Linux to support tags and see how the two 
+systems can coexist on an end-user machine. 
+A tag file system should be able to organize files, data on the disk regardless of 
+hierarchical logical approach. The position of the files on the disk is irellevant and 
+completely transparent to the user. The file system should be able to put files on disks
+and simply recover them on demand based on tags requests. 
+In our approach, logical directory based organization and file tags coexist, in order
+to see how the two systems can fit and how the user can use alternatives for searching
+and clustering the information it has. 
+We implemented a tag layer in the Linux Virtual File System and tested how this impacts 
+the regular user, we added posibilities for the user to play with tags: add, delete, search.
+
+%\subsection{Subsection Heading Here}
+%Subsection text here.
 
 
-\subsection{Subsection Heading Here}
-Subsection text here.
-
-
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
+%\subsubsection{Subsubsection Heading Here}
+%Subsubsection text here.
 
 \section{State of the art}
 
@@ -472,6 +492,14 @@ A short description of how tagfs works.
 
 \section{Conclusion}
 The conclusion goes here.
+
+Possible future work:
+In a pure tag file system, the disk mechanism could be improved in the following way:
+We know that tags can be added to some files, we have no hierarchical structure of the files.
+This way we can find blocks of files based on tags which could reduce disk fragmentation. 
+Clustering tag data can give insight on how much space there is required of a certain tag type files
+and how accessible this should be to the user. This could lower the external fragmentation of the disk
+if properly used. However more tests should be done regarding this problem. 
 
 \begin{thebibliography}{1}
 	\bibitem SStephan Bloehdorn and Max Volkel,Tagfs-tag semantics for hierarchical file systems, 
