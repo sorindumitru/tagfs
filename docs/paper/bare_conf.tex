@@ -431,9 +431,10 @@ tagging files and browsing files by tags.
 % of the abstract to achieve this. Many IEEE journals/conferences frown on
 % math in the abstract anyway.
 
-% no keywords
+% keywords
+
 \begin{keywords}
-lulu
+Tags, file systems, VFS
 \end{keywords}    
 
 % For peer review papers, you can put extra information on the cover
@@ -470,7 +471,7 @@ TagFS file system aims to bring a different approach, based on tags rather than
 hierarchical system that is rooted for a long time in modern operating system. 
 For the above example, for a TagFS filesystem the answer to both questions would
 be adding tags to photos ($<$mountains$><$Alice$>$) and then search for files that 
-contain these tags. The problem of where to store a specific photo 
+contain these tags. The question of where to store a specific photo 
  would not be that important anymore. 
 A pure tag file system is difficult to implement starting from zero, so we tried
 to adapt the current file system in Linux to support tags and see how the two 
@@ -494,7 +495,18 @@ the regular user, we added posibilities for the user to play with tags: add, del
 
 \section{State of the art}
 
-Something about Neopomuk and existing kernel implementations for tag based filesystems.
+The idea of tagging files in order to access them in an easier fashion is not
+a new one and various attempts to implement solutions have been made.
+
+\subsection{Nepomuk-KDE}
+Nepomuk-KDE is an implementation of Nepomuk which has been integrated with KDE
+and that allows adding metadata to items stored on a computer and making 
+queries based on that metadata.
+Dolphin KDE file manager allows adding and removing basic metadata to files,
+such as comments and tags.
+
+\subsection{Other tag-fs}
+existing kernel implementations for tag based filesystems.
 
 \section{Tagfs}
 
@@ -514,6 +526,8 @@ This way we can find blocks of files based on tags which could reduce disk fragm
 Clustering tag data can give insight on how much space there is required of a certain tag type files
 and how accessible this should be to the user. This could lower the external fragmentation of the disk
 if properly used. However more tests should be done regarding this problem. 
+
+-graphical if
 
 \begin{thebibliography}{1}
 	\bibitem SStephan Bloehdorn and Max Volkel,Tagfs-tag semantics for hierarchical file systems, 

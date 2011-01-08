@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.8.27)  8 JAN 2011 14:24
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.8.27)  8 JAN 2011 16:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -113,11 +113,15 @@ LaTeX Font Info:    ... okay on input line 351.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 351.
 LaTeX Font Info:    ... okay on input line 351.
 
-** ATTENTION: \keywords is deprecated (line 435). Use \IEEEkeywords instead.
+** ATTENTION: \keywords is deprecated (line 436). Use \IEEEkeywords instead.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 472.
+(Font)              <7> on input line 473.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 472.
+(Font)              <5> on input line 473.
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -129,8 +133,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
+[2
 
 ] (./bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
@@ -146,9 +149,9 @@ r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
 mf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/typ
 e1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (1 page, 59694 bytes).
+Output written on bare_conf.pdf (2 pages, 63291 bytes).
 PDF statistics:
- 27 PDF objects out of 1000 (max. 8388607)
+ 30 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
