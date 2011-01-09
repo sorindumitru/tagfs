@@ -355,6 +355,15 @@
 \renewcommand{\sfdefault}{phv}
 \renewcommand{\rmdefault}{ptm}
 \renewcommand{\ttdefault}{pcr}
+% command for specifying TODOs
+\newcommand{\todo}[1]{
+	\colorbox{yellow}{
+		\begin{minipage}{15cm}
+			\textbf{TODO:}\\
+			#1
+		\end{minipage}
+	}
+}
 
 \@IEEEcompsoconly{\typeout{-- Using IEEE Computer Society mode.}}
 
@@ -4529,6 +4538,7 @@ between column types.}%
 % general purpose bit bucket
 \newsavebox{\@IEEEtranrubishbin}
 
+\usepackage{listings}
 \usepackage{hyperref}
 \hypersetup{%
 	colorlinks=true,
