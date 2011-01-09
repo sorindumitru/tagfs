@@ -4529,6 +4529,20 @@ between column types.}%
 % general purpose bit bucket
 \newsavebox{\@IEEEtranrubishbin}
 
+\usepackage{hyperref}
+\hypersetup{%
+	colorlinks=true,
+	linkcolor=black,
+	anchorcolor=black,
+	citecolor=black,
+	filecolor=black,
+	menucolor=black,
+	urlcolor=black,
+	bookmarks=true,
+	bookmarksnumbered=true
+}
+
+\newcommand{\figref}[1]{\hyperref[#1]{Figure~\ref{#1}}}
 % flags to prevent multiple warning messages
 \newif\if@IEEEWARNthanks
 \newif\if@IEEEWARNIEEEPARstart

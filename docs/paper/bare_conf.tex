@@ -519,14 +519,31 @@ such as comments and tags.
 existing kernel implementations for tag based filesystems.
 
 \section{Tagfs}
-    TagFS 
-    \fig[scale=0.5]{figs/hierarchy.pdf}{img:hierarchy}{TagFS}
-    \fig[scale=0.5]{figs/archall.pdf}{img:arch}{TagFS architecture}
-A short description of how tagfs works.
+    
+TagFS is a software application that implements a tag-based filesystem in 
+Linux, more specifically, TagFS allows tagging a file at creation time or at
+a later time, adding and removing tags, listing the tags associated to a file
+at a given time and, the most important characteristic, TagFS allows
+browsing for files having specific tag(s).
+
+Basically the filesystem hierarchy whill remain unchanged but files will be 
+assigned tags (as it can be seen in \figref{img:hierarchy}).
+\fig[scale=0.5]{figs/hierarchy.pdf}{img:hierarchy}{TagFS}
+
+The TagFS architecture is presented in \figref{arch}. 
+\fig[scale=0.5]{figs/archall.pdf}{arch}{TagFS architecture}
+
+From a CLI TagFS associated opperations are issued, system calls are intercepted
+in VFS and when required redirected through TagFS kernel module afterwards
+being treated as regular commands by the file system.
     
 \subsection{Storage}
 
-\subsection{VFS Hooks}
+\subsection{Tag handling}
+
+\subsubsection{VFS Hooks}
+
+\subsubsection{Userspace application}
 
 \section{Conclusion}
 The conclusion goes here.
