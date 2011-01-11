@@ -581,7 +581,14 @@ was to reduce this overhead to as little as possible.
 loreipsumloreipsumloreipsumloreipsumloreipsumloreipsumloreipsumloreipsum
     \item{\textit{Userspace application}}
 
-loreipsumloreipsumloreipsumloreipsumloreipsumloreipsumloreipsumloreipsum
+The application in userspace adds the tag layer to the normal file operations using the tag
+command. This command is a normal user space application that can be called by the user. 
+This way the user can add and
+remove tags from a file, and also list the current tags. The application allows creating an entry point in the file
+system in a similar way. Tagging application works in user space and calls the specific api
+that further sends the requests to the kernel. The adding and removing of the tags keep the 
+specified convention, using ":" as delimitator. The tag listing keeps the same format as well.
+\todo{needs review}
 \end{itemize}
 
 \section{Conclusion}
