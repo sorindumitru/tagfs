@@ -427,24 +427,18 @@ Email: sorin.dumitru@cti.pub.ro}}
 %\boldmath
 
 File systems are an integral part of every operating system. Because of the 
-high capacity of modern hard drives file systems need a better way of organizing
-and accessing data.
+high capacity of modern storing devices file systems need a better way of 
+organizing and accessing data in order to be easier for one to retrieve
+exactly the files he/she is looking for.
 
-TagFS implements a tag-based filesystem in Linux which offers support for 
+TagFS implements a tag based file system in Linux which offers support for 
 tagging files and browsing files by tags.
 
 \end{abstract}
-% IEEEtran.cls defaults to using nonbold math in the Abstract.
-% This preserves the distinction between vectors and scalars. However,
-% if the conference you are submitting to favors bold math in the abstract,
-% then you can use LaTeX's standard command \boldmath at the very start
-% of the abstract to achieve this. Many IEEE journals/conferences frown on
-% math in the abstract anyway.
-
 % keywords
 
 \begin{keywords}
-Tags, file systems, VFS
+File systems, Tags, VFS, metadata
 \end{keywords}    
 
 % For peer review papers, you can put extra information on the cover
@@ -487,7 +481,7 @@ A pure tag file system is difficult to implement starting from zero, so we tried
 to adapt the current file system in Linux to support tags and see how the two 
 systems can coexist on an end-user machine. 
 A tag file system should be able to organize files, data on the disk regardless of 
-hierarchical logical approach. The position of the files on the disk is irellevant and 
+hierarchical logical approach. The position of the files on the disk is irrelevant and 
 completely transparent to the user. The file system should be able to put files on disks
 and simply recover them on demand based on tags requests. 
 In our approach, logical directory based organization and file tags coexist, in order
