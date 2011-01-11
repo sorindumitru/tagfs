@@ -430,6 +430,9 @@ File systems are an integral part of every operating system. Because of the
 high capacity of modern storing devices file systems need a better way of 
 organizing and accessing data in order to be easier for one to retrieve
 exactly the files he/she is looking for.
+Also, the need of users to personalize the content stored and
+to find specific data, pushes manufacturers to employ alternatives for the 
+curent design.
 
 TagFS implements a tag based file system in Linux which offers support for 
 tagging files and browsing files by tags.
@@ -507,7 +510,7 @@ of these applications rely on a database where mappings between files and
 associated metadata are stored and expose a set of commands which translate
 to specific queries for the database.  
 
-\subsection{Nepomuk-KDE}\footnote{\url{http://nepomuk.kde.org/}}
+\subsection[Nepomuk-KDE]{Nepomuk-KDE\footnote{\url{http://nepomuk.kde.org/}}}
 Nepomuk-KDE is an implementation of Nepomuk which has been integrated with KDE
 and that allows adding metadata to items stored on a computer and making 
 queries based on that metadata.
@@ -568,8 +571,58 @@ was to reduce this overhead to as little as possible.
 \todo{RAM storage, picture, details.}
 \fig[scale=0.4]{figs/storage.pdf}{arch}{Tag Storage}
 
-\subsection{Tag-handling commands}
-\todo{pic with command flow}
+\subsection{Tag commands}
+The idea of tagging files is to be able to add a number of tags to a file but
+since the number of tags that will be associated to a file is not known beforehand
+we establish a convention that is that a filename will be separated from its 
+associated tags by ":" whenever a command that envolves tags is issued. Also,
+one tag is separated by another tag by ":".
+$\\$
+The behaviour of \textit{ls} command so that when issued whith an argument
+starting with ":" it lists all the files that are tagged with the given words.
+$\\$
+An existent file can be assigned tags by issueing the \textit{tag} command
+with \textit{-a} parameter followed by the filename and the tags that one wants to
+attach to that file. There are two constraints that one has to take into
+account when wanting to add tags to a file. One is that the implementation of
+TagFS limits the maximum number of tags that can be assigned to a file to 256
+and the second one is a limitation imposed by the kernel implementation and
+it reffers to the fact that the total length of filename, tags and separator
+must be less or equal to the value of MAXPATHLENGTH(256).
+$\\$
+Tags can be removed from a file with \textit{tag -d filename:tag[:tag*]} command
+taking into consideration the second constraint stated above.
+$\\$
+The output of \textit{tag -l filename} command is the list of tags associated
+to a file at a given time.
+$\\$
+TagFS permits the creation of entry points in the file system which indicate 
+that starting from that point down the hierarchy tags may be used.
+This was introduced in order to reduce the overhead for file systems where
+the user does not require to use tags, limiting it to a couple of comparisons.
+An entry point can be created using \textit{tag -c} command meaning that
+the current working directory is a new TagFS entry point.  
+$\\$
+The available commands as well as a short description is listed in Table1.
+
+\begin{center}
+  \begin{table}[htb]
+  \begin{center}
+  \begin{tabular}{ | l | l | l | l |}
+    \hline
+      \textbf{Command}&\textbf{Params} &\textbf{Args}&\textbf{Description}\\ \hline
+        ls  & -  & :tag[:tag]*         & List files having the specified tags\\ \hline
+        tag & -c & -                   & Create a new entry point for TagFS\\ \hline
+        tag & -a & filename:tag[:tag]* & Add tags to file\\ \hline
+        tag & -d & filename:tag[:tag]* & Remove tags from filename\\ \hline
+        tag & -l & filename            & List all the tags for filename\\
+    \hline
+  \end{tabular}
+  \end{center}
+  \caption{TagFS implemented commands}
+  \label{table:commands}
+  \end{table}
+\end{center}
 
 \subsection{Implementation details}
 \subsubsection{Metadata structure}
