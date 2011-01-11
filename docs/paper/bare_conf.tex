@@ -491,7 +491,9 @@ In our approach, logical directory based organization and file tags coexist, in 
 to see how the two systems can fit and how the user can use alternatives for searching
 and clustering the information it has. 
 We implemented a tag layer in the Linux Virtual File System and tested how this impacts 
-the regular user, we added posibilities for the user to play with tags: add, delete, search.
+the regular user. We've added posibilities for the user to manipulate the tags (add, delete,
+ search) in order to increase the flexibility of the filesystem and the way it interacts with the user.
+TagFS is expected to make it easier to work with files, especially personal ones.
 
 %\subsection{Subsection Heading Here}
 %Subsection text here.
@@ -525,9 +527,19 @@ started at the University of Koblenz which, as Nepomuk, relies on RDF for
 defining semantics and SPARQL. Metadata is stored in a repository having an
 associated graph, and various opperations can be performed on it(additions, 
 updates, etc).
-
-
-\todo{existing implementations for tag based filesystems.}
+$\\$
+\textit{TaggedFrog}\footnote{ \url{http://lunarfrog.com/}} is a Windows application 
+based on the convenint drag'n'drop technique. It allows you to organize your files, 
+documents and Web links just by adding objects to the library and tagging them with 
+any keywords. Moreover, you are able tagging files directly from Windows File Explorer 
+because the application is integrated with Explorer's context menu.
+$\\$
+\textit{pytagsfs}\footnote{ \url{http://www.pytagsfs.org/}}
+is a FUSE filesystem, written in python for Linux and Mac OS X systems, that 
+arranges media files in a virtual directory structure based on the file tags. 
+File tags can be changed by moving and renaming virtual files and directories. 
+The virtual files can also be modified directly, and, of course, can be opened 
+and played just like regular files.
 
 \section{Tagfs}
     
@@ -548,7 +560,7 @@ of commands. The first type consists of file manipulation commands available on
 every Unix-like operating system, such as \textit{ls, touch, mv, cp} whose behaviour 
 and implementation was changed in TagFS implementation in order to support tags. 
 The second type of commands reffers to new TagFS commands implemented in order to 
-allow more tag-related operations.  
+provide more tag-related operations.  
 The implementation changes are related to hooks created in \textit{VFS} and will be detailed in 
 subsection \textit{Tag handling}. 
 No implementation changes at filesystem level were required.
@@ -556,7 +568,7 @@ No implementation changes at filesystem level were required.
 \subsection{Architectural decision}
 TagFS started as an idea to create a more user-friendly file system; remembering
 tags is easier than remembering the name of a file or the place where it is stored
-but at the same time a pure tag filesystem would offer no simple way of organizing data 
+but, at the same time a pure tag filesystem would offer no simple way of organizing data 
 in a hierarchical manner, a choice to implement TagFS as a new filesystem, from 
 scratch, thus would have been pointless.
 The other choice was to implement TagFS as hooks in
