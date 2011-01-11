@@ -526,7 +526,8 @@ such as comments and tags.
 //www.eswc2006.org/poster-papers/FP31-Schenk.pdf/}} is a research projected
 started at the University of Koblenz which, as Nepomuk, relies on RDF for
 defining semantics and SPARQL. Metadata is stored in a repository having an
-associated graph, and various opperations can be performed on it(additions, updates, etc).
+associated graph, and various opperations can be performed on it(additions, 
+updates, etc).
 
 
 \todo{existing implementations for tag based filesystems.}
@@ -571,18 +572,25 @@ was to reduce this overhead to as little as possible.
       
 \subsection{Storage}
 \todo{RAM storage, picture, details.}
+\fig[scale=0.4]{figs/storage.pdf}{arch}{Tag Storage}
+
 \subsection{Tag-handling commands}
 \todo{pic with command flow}
 
-\subsubsection{Implementation details}
-\begin{itemize}
-    \item{\textit{VFS Hooks}}
+\subsection{Implementation details}
+\subsection{Metadata structure}
+\subsection{VFS Hooks}
     
 loreipsumloreipsumloreipsumloreipsumloreipsumloreipsumloreipsumloreipsum
-    \item{\textit{Userspace application}}
-
-loreipsumloreipsumloreipsumloreipsumloreipsumloreipsumloreipsumloreipsum
-\end{itemize}
+\subsection{Userspace application}
+The application in userspace adds the tag layer to the normal file operations using the tag
+command. This command is a normal user space application that can be called by the user. 
+This way the user can add and
+remove tags from a file, and also list the current tags. The application allows creating an entry point in the file
+system in a similar way. Tagging application works in user space and calls the specific api
+that further sends the requests to the kernel. The adding and removing of the tags keep the 
+specified convention, using ":" as delimitator. The tag listing keeps the same format as well.
+\todo{needs review}
 
 \section{Conclusion}
 The conclusion goes here.
