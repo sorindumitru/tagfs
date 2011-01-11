@@ -4537,8 +4537,19 @@ between column types.}%
 
 % general purpose bit bucket
 \newsavebox{\@IEEEtranrubishbin}
-
+%footnote
+\usepackage{footnote}
+\usepackage{perpage}
+\MakePerPage{footnote}
 \usepackage{listings}
+\makesavenoteenv{environmentname}
+
+\lstset{
+	numbers=left, numberstyle=\footnotesize,
+	frame=lines, captionpos=b,
+	breaklines=true,
+	basicstyle=\ttfamily
+}
 \usepackage{hyperref}
 \hypersetup{%
 	colorlinks=true,

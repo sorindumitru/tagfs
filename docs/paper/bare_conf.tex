@@ -506,9 +506,14 @@ the regular user, we added posibilities for the user to play with tags: add, del
 \section{State of the art}
 
 The idea of tagging files in order to access them in an easier fashion is not
-a new one and various attempts to implement solutions have been made.
+a new one and various attempts to implement solutions have been made. Some of
+these are specialized solutions for special kind of data, such as Calibre
+which makes ebook management easier, implemented in userspace. The vast majority
+of these applications rely on a database where mappings between files and 
+associated metadata are stored and expose a set of commands which translate
+to specific queries for the database.  
 
-\subsection{Nepomuk-KDE}
+\subsection{Nepomuk-KDE}\footnote{\url{http://nepomuk.kde.org/}}
 Nepomuk-KDE is an implementation of Nepomuk which has been integrated with KDE
 and that allows adding metadata to items stored on a computer and making 
 queries based on that metadata.
@@ -516,8 +521,15 @@ Dolphin KDE file manager allows adding and removing basic metadata to files,
 such as comments and tags.
 \todo{more on this}
 
-\subsection{Other tag-fs}
-\todo{existing kernel implementations for tag based filesystems.}
+\subsection{Other Projects}
+\textit{TagFS: Bringing Semantic Metadata to the Filesystem}\footnote{ \url{http:
+//www.eswc2006.org/poster-papers/FP31-Schenk.pdf/}} is a research projected
+started at the University of Koblenz which, as Nepomuk, relies on RDF for
+defining semantics and SPARQL. Metadata is stored in a repository having an
+associated graph, and various opperations can be performed on it(additions, updates, etc).
+
+
+\todo{existing implementations for tag based filesystems.}
 
 \section{Tagfs}
     
