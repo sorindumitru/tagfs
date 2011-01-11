@@ -6,6 +6,7 @@
     \end{center}
 \end{figure}
 }
+
 % bare_conf.tex
 %% V1.3
 %% 2007/01/11
@@ -565,7 +566,7 @@ The implementation changes are related to hooks created in \textit{VFS} and will
 subsection \textit{Tag handling}. 
 No implementation changes at filesystem level were required.
 
-\subsection{Architectural decision}
+\subsection{Architectural decisions}
 TagFS started as an idea to create a more user-friendly file system; remembering
 tags is easier than remembering the name of a file or the place where it is stored
 but, at the same time a pure tag filesystem would offer no simple way of organizing data 
@@ -576,12 +577,26 @@ VFS in order to store and retrieve needed metadata.
 Since changes are made at VFS level there will be an overhead for filesystems that
 subsequently are to be used without tag support. A main concern in implementation
 was to reduce this overhead to as little as possible.
-
-\todo{Add details about how tags are stored and browsed}
+$\\$
+From the beginning the focus was on the changes needed at VFS and file system 
+level and not on storage possibilities of the mappings between files and
+associated tags and so these mappings are stored in a file which is always in RAM memory.
+$\\$
+The keyword of entry point was defined in order to designate a point in the file system
+hierarchy starting from which a distinct TagFS begins meaning that only for that part of
+the file system tags apply; for a file system multiple entry points can be declared.
+\todo{Sorin is this assumption correct?}
       
 \subsection{Storage}
-\todo{RAM storage, picture, details.}
-\fig[scale=0.4]{figs/storage.pdf}{arch}{Tag Storage}
+The mapping between a file and its associated tags is presented in \figref{storage}.
+\fig[scale=0.4]{figs/storage.pdf}{storage}{Tag Storage}
+Actually it maps tags to files and this is because not necessary all files from a TagFS
+have tags associated.
+Since a file can be tagged more than once, for every tag a list of pointers to
+files is stored rather than actual files.
+\todo{Reformulati va rog}
+The implementation details are presented in a separate section later in this
+paper.
 
 \subsection{Tag commands}
 The idea of tagging files is to be able to add a number of tags to a file but
@@ -600,7 +615,7 @@ account when wanting to add tags to a file. One is that the implementation of
 TagFS limits the maximum number of tags that can be assigned to a file to 256
 and the second one is a limitation imposed by the kernel implementation and
 it reffers to the fact that the total length of filename, tags and separator
-must be less or equal to the value of MAXPATHLENGTH(256).
+must be less or equal to the value of MAX$\_$PATH$\_$LENGTH(256).
 $\\$
 Tags can be removed from a file with \textit{tag -d filename:tag[:tag*]} command
 taking into consideration the second constraint stated above.
@@ -637,20 +652,31 @@ The available commands as well as a short description is listed in Table1.
 \end{center}
 
 \subsection{Implementation details}
-\subsubsection{Metadata structure}
-\subsubsection{VFS Hooks} $\\$loreipsumloreipsumloreipsumloreipsumloreipsumloreipsumloreipsumloreipsum
-\subsubsection{Userspace application} $\\$The application in userspace adds the tag layer to the normal file operations using the tag
+\subsubsection[medatada]{Metadata structure}$\\$
+At the moment of allocation in the system each tag is associated an unique number
+\todo{metadata implementation}
+\subsubsection{VFS Hooks} $\\$
+The VFS hooks allow TagFS to break out of the normal flow of the kernel and performs certain
+verifications in order to determine if a particular file should or not be treated as a tag-able
+file and afterwards, if necessary, performing the desired changes.
+\todo{hooks}
+\subsubsection{Userspace application} 
+$\\$The application in userspace adds the tag layer to the normal file operations using the tag
 command. This command is a normal user space application that can be called by the user. 
 This way the user can add and
 remove tags from a file, and also list the current tags. The application allows creating an entry point in the file
 system in a similar way. Tagging application works in user space and calls the specific api
 that further sends the requests to the kernel. The adding and removing of the tags keep the 
 specified convention, using ":" as delimitator. The tag listing keeps the same format as well.
-\todo{needs review}
+The tag user application uses \textit{fcntl} system call in order to send the operation type
+and required arguments, new command types have been defined for fcntl for TagFS operations. 
+From fcntl syscall other kernel-level tag specific functions are called.
+\todo{sorin, fie zici aici de functiile noi fie daca le-ai amintit la VFS hooks zici
+ca sunt cele de mai sus}
 
 \section{Conclusion}
-The conclusion goes here.
 
+$\\$
 Possible future work:
 In a pure tag file system, the disk mechanism could be improved in the following way:
 We know that tags can be added to some files, we have no hierarchical structure of the files.
@@ -658,8 +684,11 @@ This way we can find blocks of files based on tags which could reduce disk fragm
 Clustering tag data can give insight on how much space there is required of a certain tag type files
 and how accessible this should be to the user. This could lower the external fragmentation of the disk
 if properly used. However more tests should be done regarding this problem. 
-
--graphical if
+$\\ \\$
+Given the fact that Linux implements Extended Attributes(also called xattrs) which are name/value pairs 
+associated with files as an extension to normal inode-based attributes, tags could be inserted in xattrs
+and could be easily displayed of graphical file browsers.
+\todo{nu e file browsers, e altceva da e prea tarziu}
 
 \begin{thebibliography}{1}
 	\bibitem SStephan Bloehdorn and Max Volkel,Tagfs-tag semantics for hierarchical file systems, 

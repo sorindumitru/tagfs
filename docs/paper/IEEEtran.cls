@@ -4614,6 +4614,7 @@ between column types.}%
  is locked out for technotes (line \the\inputlineno).}\fi\global\@IEEEWARNIEEEPARstartfalse}
 \fi
 
+\newcommand{\subsecref}[1]{\hyperref[#1]{Subsection~\ref{#1}}}
 
 % lockout unneeded commands when in conference mode
 \ifCLASSOPTIONconference
