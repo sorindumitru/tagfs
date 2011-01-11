@@ -38,7 +38,8 @@ int main(int argc, char * argv[])
         return 1;
 	}
 
-    if ( argc == 3 && strcmp(argv[1],"-c") ){
+    if ( argc == 3 && strcmp(argv[1],"-c") )
+	{
         
         //filename existence check
         char *arg = calloc(strlen(argv[2]), sizeof(char));
@@ -103,14 +104,15 @@ int main(int argc, char * argv[])
             else 
                 printf("Could not delete tag from file !\n");
         }
-	}else if ( strcmp(argv[1],"-c") ){
+	}
+	else if ( strcmp(argv[1],"-c") )
+	{
 		printf("Usage: tag (-a/-d/-l) filename[:tag1:...:tagn]\n OR\n tag -c\n");
 		return 1;
-    }else{
-        if ( strcmp(argv[1],"-c") ){
-		    printf("Usage: tag (-a/-d/-l) filename[:tag1:...:tagn]\n OR\n tag -c\n");
-		    return 1;
-        }
+    }
+	else
+	{
+	
         //create start point
         if ( !create_tag_entry() )
            printf("Created new entry point for TagFS\n");
