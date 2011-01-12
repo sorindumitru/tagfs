@@ -517,9 +517,13 @@ to specific queries for the database.
 Nepomuk-KDE is an implementation of Nepomuk which has been integrated with KDE
 and that allows adding metadata to items stored on a computer and making 
 queries based on that metadata.
-Dolphin KDE file manager allows adding and removing basic metadata to files,
-such as comments and tags.
-\todo{more on this}
+Based on the Nepomuk specification, Nepomuk-KDE is able to store in a RDF
+(Resurse Description Framework) semantic data from desktop applications. For example
+the Dolphin desktop manager is able to add simple tags to files or more complicated
+comments. 
+This solution is not limited to files metadata. Almost every application can use
+the RDF store to add semantic metadata to theire objects. For example KMail can do it
+for emails, Amarok can do it for music files, but it is used mostly for tagging files.
 
 \subsection{Other Projects}
 \textit{TagFS: Bringing Semantic Metadata to the Filesystem}\footnote{ \url{http:
@@ -584,8 +588,10 @@ associated tags and so these mappings are stored in a file which is always in RA
 $\\$
 The keyword of entry point was defined in order to designate a point in the file system
 hierarchy starting from which a distinct TagFS begins meaning that only for that part of
-the file system tags apply; for a file system multiple entry points can be declared.
-\todo{Sorin is this assumption correct?}
+the file system tags apply; for a file system multiple entry points can be declared. This
+allowed to keep the changes necessary for tagfs isolated so that the performance for the
+normal case is not affected. This way the only difference from a vanilla kernel is that we
+a string comparison for each entry point defined.
       
 \subsection{Storage}
 The mapping between a file and its associated tags is presented in \figref{storage}.
@@ -653,12 +659,14 @@ The available commands as well as a short description is listed in Table1.
 
 \subsection{Implementation details}
 \subsubsection[medatada]{Metadata structure}$\\$
+The metadata is stored into two hashtables. One for tags and one for files. 
 At the moment of allocation in the system each tag is associated an unique number
 \todo{metadata implementation}
 \subsubsection{VFS Hooks} $\\$
 The VFS hooks allow TagFS to break out of the normal flow of the kernel and performs certain
 verifications in order to determine if a particular file should or not be treated as a tag-able
-file and afterwards, if necessary, performing the desired changes.
+file and afterwards, if necessary, performing the desired changes. The hooks are only called if
+the file is inside one of the defined entry points.
 \todo{hooks}
 \subsubsection{Userspace application} 
 $\\$The application in userspace adds the tag layer to the normal file operations using the tag
