@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.8.27)  8 JAN 2011 17:51
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.10)  12 JAN 2011 02:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,13 +6,7 @@ entering extended mode
 (./bare_conf.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
-ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
-9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
-skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
-orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
-, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
-rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+yphenation, loaded.
 (./IEEEtran.cls
 Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
@@ -22,7 +16,7 @@ Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
 \@IEEEtrantmpcountA=\count79
 \@IEEEtrantmpcountB=\count80
 \@IEEEtrantmptoksA=\toks14
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 366.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 375.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -35,45 +29,45 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \CLASSINFOnormalsizeunitybaselineskip=\dimen106
 \IEEEnormaljot=\dimen107
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 733.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 733.
 \IEEEilabelindentA=\dimen108
 \IEEEilabelindentB=\dimen109
 \IEEEilabelindent=\dimen110
@@ -97,13 +91,168 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEtmpitemindent=\dimen116
 \c@IEEEbiography=\count90
 \@IEEEtranrubishbin=\box26
-) (/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf-texlive/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box27
+\fn@width=\dimen117
+) (./perpage.sty
+Package: perpage 2006/07/15 1.12 Reset/sort counters per page
+\c@abspage=\count91
+)
+\c@pp@a@footnote=\count92
 
+(/usr/share/texmf-texlive/tex/latex/listings/listings.sty
 (/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks15
 )
+\lst@mode=\count93
+\lst@gtempboxa=\box28
+\lst@token=\toks16
+\lst@length=\count94
+\lst@currlwidth=\dimen118
+\lst@column=\count95
+\lst@pos=\count96
+\lst@lostspace=\dimen119
+\lst@width=\dimen120
+\lst@newlines=\count97
+\lst@lineno=\count98
+\lst@maxwidth=\dimen121
+
+(/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count99
+\lst@skipnumbers=\count100
+\lst@framebox=\box29
+)
+(/usr/share/texmf-texlive/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/usr/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2009/10/09 v6.79a Hypertext links for LaTeX
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/hycolor.sty
+Package: hycolor 2009/10/02 v1.5 Code for color options of hyperref/bookmark (H
+O)
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/xcolor-patch.sty
+Package: xcolor-patch 2009/10/02 xcolor patch
+))
+\@linkdim=\dimen122
+\Hy@linkcounter=\count101
+\Hy@pagecounter=\count102
+
+(/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2009/10/09 v6.79a Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)
+(/usr/share/texmf-texlive/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2009/08/13 v3.4 Keyval support for LaTeX options (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2009/07/30 v1.5 Key value parser with default handler suppor
+t (HO)
+))
+Package hyperref Info: Hyper figures OFF on input line 2975.
+Package hyperref Info: Link nesting OFF on input line 2980.
+Package hyperref Info: Hyper index ON on input line 2983.
+Package hyperref Info: Plain pages OFF on input line 2990.
+Package hyperref Info: Backreferencing OFF on input line 2995.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 3191.
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 3428.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bitset.sty
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/intcalc.sty
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bigintcalc.sty
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2009/09/23 v0.6 LuaTeX support for pdfTeX utility functions
+ (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2009/04/17 v1.2 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2009/08/05 v1.0 Some LaTeX kernel commands for general use (HO
+)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)))
+\Fld@menulength=\count103
+\Field@Width=\dimen123
+\Fld@charsize=\dimen124
+\Field@toks=\toks17
+Package hyperref Info: Hyper figures OFF on input line 4377.
+Package hyperref Info: Link nesting OFF on input line 4382.
+Package hyperref Info: Hyper index ON on input line 4385.
+Package hyperref Info: backreferencing OFF on input line 4392.
+Package hyperref Info: Link coloring OFF on input line 4397.
+Package hyperref Info: Link coloring with OCG OFF on input line 4402.
+Package hyperref Info: PDF/A mode OFF on input line 4407.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
+)
+\Hy@abspage=\count104
+\c@Item=\count105
+\c@Hfootnote=\count106
+)
+*hyperref using default driver hpdftex*
+(/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
+\Fld@listcount=\count107
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4564.
+
+
+Package hyperref Warning: Option `bookmarks' has already been used,
+(hyperref)                setting the option has no effect on input line 4564.
+
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4564
+.
+) (/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
 (/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
@@ -116,64 +265,254 @@ File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
-\Gread@gobject=\count91
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count108
 ))
-\Gin@req@height=\dimen117
-\Gin@req@width=\dimen118
-)
-(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
-\Urlmuskip=\muskip10
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
 ) (./bare_conf.aux)
 \openout1 = `bare_conf.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 361.
-LaTeX Font Info:    ... okay on input line 361.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 361.
-LaTeX Font Info:    ... okay on input line 361.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 361.
-LaTeX Font Info:    ... okay on input line 361.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 361.
-LaTeX Font Info:    ... okay on input line 361.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 361.
-LaTeX Font Info:    ... okay on input line 361.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 361.
-LaTeX Font Info:    ... okay on input line 361.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 362.
+LaTeX Font Info:    ... okay on input line 362.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 362.
+LaTeX Font Info:    ... okay on input line 362.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 362.
+LaTeX Font Info:    ... okay on input line 362.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 362.
+LaTeX Font Info:    ... okay on input line 362.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 362.
+LaTeX Font Info:    ... okay on input line 362.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 362.
+LaTeX Font Info:    ... okay on input line 362.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 362.
+LaTeX Font Info:    ... okay on input line 362.
+\c@lstlisting=\count109
 
-(/usr/share/texmf/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count92
-\scratchdimen=\dimen119
-\scratchbox=\box27
-\nofMPsegments=\count93
-\nofMParguments=\count94
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count95
-\MPscratchDim=\dimen120
-\MPnumerator=\count96
-\everyMPtoPDFconversion=\toks17
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-** ATTENTION: \keywords is deprecated (line 446). Use \IEEEkeywords instead.
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+Package hyperref Info: Link coloring ON on input line 362.
+
+(/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+)
+\c@section@level=\count110
+)
+LaTeX Info: Redefining \ref on input line 362.
+LaTeX Info: Redefining \pageref on input line 362.
+ (./bare_conf.out)
+(./bare_conf.out)
+\@outlinefile=\write3
+\openout3 = `bare_conf.out'.
+
+\AtBeginShipoutBox=\box30
+ (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count111
+\scratchdimen=\dimen127
+\scratchbox=\box31
+\nofMPsegments=\count112
+\nofMParguments=\count113
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count114
+\MPscratchDim=\dimen128
+\MPnumerator=\count115
+\everyMPtoPDFconversion=\toks19
+)
+** ATTENTION: \keywords is deprecated (line 444). Use \IEEEkeywords instead.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 483.
+(Font)              <7> on input line 481.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 483.
-<figs/hierarchy.pdf, id=1, 410.42902pt x 131.482pt>
-File: figs/hierarchy.pdf Graphic file (type pdf)
- <use figs/hierarchy.pdf>
-<figs/archall.pdf, id=3, 368.38042pt x 133.2138pt>
-File: figs/archall.pdf Graphic file (type pdf)
- <use figs/archall.pdf>
+(Font)              <5> on input line 481.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 516.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 516.
+
+Overfull \hbox (187.79146pt too wide) in paragraph at lines 517--523
+[][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--523
+
+ []
+
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./figs/hierarchy.pdf>]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 547.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 547.
+]
+Underfull \hbox (badness 10000) in paragraph at lines 538--545
 
+ []
+
+<figs/hierarchy.pdf, id=89, 410.42902pt x 131.482pt>
+File: figs/hierarchy.pdf Graphic file (type pdf)
+ <use figs/hierarchy.pdf>
+<figs/archall.pdf, id=93, 368.38042pt x 133.2138pt>
+File: figs/archall.pdf Graphic file (type pdf)
+ <use figs/archall.pdf>
+Underfull \hbox (badness 2469) in paragraph at lines 571--590
+\OT1/ptm/m/n/10 The key-word of en-try point was de-fined in or-der to
+ []
+
+
+Underfull \hbox (badness 2065) in paragraph at lines 571--590
+\OT1/ptm/m/n/10 des-ig-nate a point in the file sys-tem hi-er-ar-chy start-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--590
+\OT1/ptm/m/n/10 from which a dis-tinct TagFS be-gins mean-ing that
+ []
+
+
+Underfull \hbox (badness 2376) in paragraph at lines 571--590
+\OT1/ptm/m/n/10 only for that part of the file sys-tem tags ap-ply; for
+ []
+
+
+Underfull \hbox (badness 3977) in paragraph at lines 571--590
+\OT1/ptm/m/n/10 a file sys-tem mul-ti-ple en-try points can be de-clared.
+ []
+
+
+Overfull \hbox (187.79146pt too wide) in paragraph at lines 571--590
+[][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--590
+
+ []
+
+
+
+pdfTeX warning: pdflatex (file ./figs/storage.pdf): PDF inclusion: found PDF ve
+rsion <1.5>, but at most version <1.4> allowed
+<figs/storage.pdf, id=97, 642.4pt x 481.8pt>
+File: figs/storage.pdf Graphic file (type pdf)
+ <use figs/storage.pdf>
+Overfull \hbox (4.95544pt too wide) in paragraph at lines 593--593
+ [] 
+ []
+
+
+Overfull \hbox (187.79146pt too wide) in paragraph at lines 592--601
+[][][][][][]
+ []
+
+
+Underfull \hbox (badness 3557) in paragraph at lines 603--635
+\OT1/ptm/m/n/10 Tags can be re-moved from a file with \OT1/ptm/m/it/10 tag -d f
+ile-
+ []
+
+[2 <./figs/hierarchy.pdf> <./figs/archall.pdf>]
+Overfull \hbox (36.28635pt too wide) in paragraph at lines 639--649
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 656--659
+\OT1/ptm/m/n/10 At the mo-ment of al-lo-ca-tion in the sys-tem
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 656--659
+\OT1/ptm/m/n/10 each tag is as-so-ci-ated an unique num-ber
+ []
+
+
+Overfull \hbox (187.79146pt too wide) in paragraph at lines 656--659
+[][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 656--659
+
+ []
+
+
+Underfull \hbox (badness 5563) in paragraph at lines 659--664
+\OT1/ptm/m/n/10 The VFS hooks al-low TagFS to break out of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 659--664
+\OT1/ptm/m/n/10 nor-mal flow of the ker-nel and per-forms cer-tain
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 659--664
+\OT1/ptm/m/n/10 ver-i-fi-ca-tions in or-der to de-ter-mine if a par-tic-u-lar
+ []
+
+
+Underfull \hbox (badness 3189) in paragraph at lines 659--664
+\OT1/ptm/m/n/10 file should or not be treated as a tag-able file and
+ []
+
+
+Overfull \hbox (187.79146pt too wide) in paragraph at lines 659--664
+[][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 659--664
+
+ []
+
+
+Overfull \hbox (187.79146pt too wide) in paragraph at lines 665--677
+[][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 665--677
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 680--693
+\OT1/ptm/m/n/10 Given the fact that Linux im-ple-ments Ex-tended
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 680--693
+\OT1/ptm/m/n/10 as-so-ci-ated with files as an ex-ten-sion to nor-mal inode-
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 680--693
+\OT1/ptm/m/n/10 based at-tributes, tags could be in-serted in xat-trs and
+ []
+
+
+Underfull \hbox (badness 4556) in paragraph at lines 680--693
+\OT1/ptm/m/n/10 could be eas-ily dis-played of graph-i-cal file browsers.
+ []
+
+
+Overfull \hbox (187.79146pt too wide) in paragraph at lines 680--693
+[][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 680--693
+
+ []
+
+[3 <./figs/storage.pdf>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -185,26 +524,25 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
+[4
 
- <./figs/archall.pdf>] (./bare_conf.aux) ) 
+] (./bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
- 1676 strings out of 493848
- 25640 string characters out of 1152823
- 83214 words of memory out of 3000000
- 4984 multiletter control sequences out of 15000+50000
- 34830 words of font info for 68 fonts, out of 3000000 for 9000
- 717 hyphenation exceptions out of 8191
- 26i,8n,21p,202b,316s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/d
-vips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
-xmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/t
-ype1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri
-8a.pfb>
-Output written on bare_conf.pdf (2 pages, 79014 bytes).
+ 6196 strings out of 495061
+ 93686 string characters out of 1182620
+ 175658 words of memory out of 3000000
+ 9273 multiletter control sequences out of 15000+50000
+ 41431 words of font info for 75 fonts, out of 3000000 for 9000
+ 31 hyphenation exceptions out of 8191
+ 45i,9n,37p,268b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</us
+r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
+mf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/typ
+e1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a
+.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_conf.pdf (4 pages, 115829 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
+ 144 words of extra memory for PDF output out of 10000 (max. 10000000)
 

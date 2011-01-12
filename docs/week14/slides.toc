@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.07pt}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Architecture}{5}{0}{2}
+\beamer@sectionintoc {3}{VFS \& TagFS Operations}{8}{0}{3}
+\beamer@sectionintoc {4}{Implementation Details}{10}{0}{4}
+\beamer@sectionintoc {5}{Conclusions}{11}{0}{5}
