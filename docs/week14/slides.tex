@@ -106,6 +106,10 @@
 \begin{frame}{TagFS Operations}
     \begin{itemize}
         \item {All use fcntl syscall}
+		 \item \textcolor{red}{ tag -c}
+            \begin{itemize}
+                \item{create an entry point in the file system}
+            \end{itemize}
         \item \textcolor{red}{ tag -l filename}
             \begin{itemize}
                 \item{list tags associated with a file}
@@ -125,7 +129,10 @@
 \section{Implementation Details}
 \begin{frame}{TO DO}
     \begin{itemize}
-      \item{To Do...}
+      \item{Userspace application}
+	  \item{API for interaction with kernel VFS hooks}
+	  \item{Storing metadata in disk structures}
+	  \item{ e ok aici ? Sorin ? bla.}
     \end{itemize}
 \end{frame}
 
@@ -135,10 +142,13 @@
     \begin{itemize}
         \item {Improvements:}
 	\begin{itemize}
+		\item{Simple way to organize files}
+		\item{Simple way to search for files}
+		\item{Different, modern approach}
 		\item{Lower external fragmentation of disk}
+		\item{Possible usage of extended attributes for file browsers}
 	\end{itemize}
-        \item {A tag file system is a feasible solution now-a-days}
-	\item {Some more stuff written here ~~~} 
+        \item {A tag file system is a feasible solution now-a-days} 
     \end{itemize}
 \end{frame}
 
