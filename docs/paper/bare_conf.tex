@@ -514,12 +514,19 @@ associated metadata are stored and expose a set of commands which translate
 to specific queries for the database.  
 
 \subsection[Nepomuk-KDE]{Nepomuk-KDE\footnote{\url{http://nepomuk.kde.org/}}}
-Nepomuk-KDE is an implementation of Nepomuk which has been integrated with KDE
-and that allows adding metadata to items stored on a computer and making 
-queries based on that metadata.
-Dolphin KDE file manager allows adding and removing basic metadata to files,
-such as comments and tags.
-\todo{more on this}
+Nepomuk-KDENepomuk-KDE is an implementation of Nepomuk which
+has been integrated with KDE and that allows adding metadata
+to items stored on a computer and making queries based on
+that metadata. Based on the Nepomuk specification, Nepomuk-
+KDE is able to store in a RDF (Resurse Description Frame-
+work) semantic data from desktop applications. For example
+the Dolphin desktop manager is able to add simple tags to ﬁles
+or more complicated comments. This solution is not limited
+to files metadata. Almost every application can use the RDF
+store to add semantic metadata to theire objects. For example
+KMail can do it for emails, Amarok can do it for music ﬁles,
+but it is used mostly for tagging ﬁles.
+
 
 \subsection{TaggedFrog}TaggedFrog\footnote{ \url{http://lunarfrog.com/}} is a Windows application 
 based on the convenint drag'n'drop technique. It allows you to organize your files, 
@@ -583,10 +590,15 @@ From the beginning the focus was on the changes needed at VFS and file system
 level and not on storage possibilities of the mappings between files and
 associated tags and so these mappings are stored in a file which is always in RAM memory.
 $\\$
-The keyword of entry point was defined in order to designate a point in the file system
-hierarchy starting from which a distinct TagFS begins, meaning that only for that part of
-the file system tags apply; for a file system multiple entry points can be declared.
-\todo{Sorin is this assumption correct?}
+The keyword of entry point was deﬁned in order to designate
+a point in the ﬁle system hierarchy starting from which a
+distinct TagFS begins meaning that only for that part of the
+ﬁle system tags apply; for a ﬁle system multiple entry points
+can be declared. This allowed to keep the changes necessary
+for tagfs isolated so that the performance for the normal case
+is not affected. This way the only difference from a vanilla
+kernel is that we a string comparison for each entry point
+deﬁned.
       
 \subsection{Storage}
 The mapping between a file and its associated tags is presented in \figref{storage}.
@@ -595,7 +607,6 @@ Actually it maps tags to files and this is because not necessary all files from 
 have tags associated.
 Since a file can be tagged more than once, for every tag a list of pointers to
 files is stored rather than actual files.
-\todo{Reformulati va rog}
 The implementation details are presented in a separate section later in this
 paper.
 
@@ -654,26 +665,48 @@ The available commands as well as a short description is listed in Table1.
 
 \subsection{Implementation details}
 \subsubsection[medatada]{Metadata structure}$\\$
-At the moment of allocation in the system each tag is associated an unique number
-\todo{metadata implementation}
+We hold two hashtables in memory. One of them keeps the
+tags from the system and the other hold the ﬁles. Structures
+are added in this hashtables when we add tags to a ﬁle. If the
+file is not tracked, we create a new entry for it in the hashtable.
+The same is done for each tag. Each tag from the tag hashtable
+holds a list of ﬁle pointers, each pointing to a speciﬁc ﬁle. This
+way we don’t have to duplicate the information about each ﬁle.
+To associate a tag to ﬁle, each ﬁle will have a bitvector with
+enough space for each tag.
+
+
 \subsubsection{VFS Hooks} $\\$
-The VFS hooks allow TagFS to break out of the normal flow of the kernel and performs certain
-verifications in order to determine if a particular file should or not be treated as a tag-able
-file and afterwards, if necessary, performing the desired changes.
-\todo{hooks}
+The VFS hooks allow TagFS to break out of the normal ﬂow
+of the kernel and performs certain veriﬁcations in order to
+determine if a particular ﬁle should or not be treated as a tag-
+able ﬁle and afterwards, if necessary, performing the desired
+changes. These will usually strip the tags from the ﬁlename
+so that normal operations will work as expected( E.g doing ls
+dir:tag would try to open the ﬁle ”dir:tag” but the ﬁle does
+not exist so it would fail. Because of this, it is necessary to
+strip the tags). After this they will continue to do operation
+speciﬁc things. For example a getdenst call will list the ﬁles
+associated with the provided tags.
+
 \subsubsection{Userspace application} 
-$\\$The application in userspace adds the tag layer to the normal file operations using the tag
-command. This command is a normal user space application that can be called by the user. 
-This way the user can add and
-remove tags from a file, and also list the current tags. The application allows creating an entry point in the file
-system in a similar way. Tagging application works in user space and calls the specific api
-that further sends the requests to the kernel. The adding and removing of the tags keep the 
-specified convention, using ":" as delimitator. The tag listing keeps the same format as well.
-The tag user application uses \textit{fcntl} system call in order to send the operation type
-and required arguments, new command types have been defined for fcntl for TagFS operations. 
-From fcntl syscall other kernel-level tag specific functions are called.
-\todo{sorin, fie zici aici de functiile noi fie daca le-ai amintit la VFS hooks zici
-ca sunt cele de mai sus}
+$\\$ The application in userspace adds the tag layer to the normal
+ﬁle operations using the tag command. This command is a
+normal user space application that can be called by the user.
+This way the user can add and remove tags from a ﬁle, and also
+list the current tags. The application allows creating an entry
+point in the ﬁle system in a similar way. Tagging application
+works in user space and calls the speciﬁc api that further sends
+the requests to the kernel. The adding and removing of the
+tags keep the speciﬁed convention, using ”:” as delimitator.
+The tag listing keeps the same format as well. The tag user
+application uses fcntl system call in order to send the operation
+type and required arguments, new command types have been
+deﬁned for fcntl for TagFS operations. From fcntl syscall other
+kernel-level tag speciﬁc functions are called for adding tags
+deleting tags searching and creating entry points.
+
+
 
 \section{Experimental results}
 $\\$
