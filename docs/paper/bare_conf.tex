@@ -543,7 +543,7 @@ File tags can be changed by moving and renaming virtual files and directories.
 The virtual files can also be modified directly, and, of course, can be opened 
 and played just like regular files.
 
-\subsection{Other Projects}
+\subsection{TagFS:Bringing Semantic Metadata to the Filesystem}
 \textit{TagFS: Bringing Semantic Metadata to the Filesystem}\footnote{ \url{http:
 //www.eswc2006.org/poster-papers/FP31-Schenk.pdf/}} is a research projected
 started at the University of Koblenz which, as Nepomuk, relies on RDF for
@@ -620,8 +620,9 @@ we establish a convention that is that a filename will be separated from its
 associated tags by ":" whenever a command that envolves tags is issued. Also,
 one tag is separated by another tag by ":".
 $\\$
-The behaviour of \textit{ls} command so that when issued whith an argument
-starting with ":" it lists all the files that are tagged with the given words.
+The behaviour of \textit{ls} command was changed so that when issued with 
+an argument
+beginning with ":" it lists all the files that are tagged with the given words.
 $\\$
 An existent file can be assigned tags by issueing the \textit{tag} command
 with \textit{-a} parameter followed by the filename and the tags that one wants to
@@ -739,17 +740,61 @@ The test platform is represented by Fedora 14 OS with a 2.6.35.10 kernel
 compiled with the changes for TagFS.
 At the moment \textit{ls} command is the only Unix-based one hacked to allow 
 the use of tags and three TagFS commands (tag -c tag -a, tag -d) are fully 
-implemented and tested. We started with it because it was the most important, the main use
-of the tags is searching by them, and because of lack of time we didn't get to implement other commands.
+implemented and tested. We started with \textit{ls} because it is the command
+with the most importance, the main use
+of the tags being to search by them, and we did not have enough time to implement
+the other command.
 
 A first test scenario was to add tags to a file and browse the file based on 
 one or more of its associated tags
-
+\begin{lstlisting}
+$ cd ~/tagFS
+$ ls 
+tag_test  untagged
+$ tag -c 
+$ tag -a tag_test:soa:tag:fs
+$ ls :soa
+tag_test
+$ ls :fs:soa:tag
+tag_test
+$ tag -d tag_test:soa
+$ ls :fs:soa:tag
+$
+\end{lstlisting}
 A second test scenario is having more tagged files and to browse by various
  combinations of these tags.
+\begin{lstlisting}
+$ ls
+tag_test  untagged
+$ tag -a untagged:soa:fs:test
+$ tag -a tag_test:second:soa:test
+$ ls :soa:test
+tag_test  untagged
+\end{lstlisting}
 \section{Conclusion}
 
 $\\$
+There are still a couple of common UNIX commands whose behaviour we want to 
+modify is order to issue with tags and a tag-specific command for listing
+the tags associated with a file.
+\begin{center}
+	\begin{table}[htb]
+	\begin{center}
+	\begin{tabular}{ | p{1.5cm} | p{3.5cm} | p{1.5cm} |}
+	\hline
+	\textbf{Command}&\textbf{Description}&\textbf{VFS function}\\ \hline
+	 touch &Add tags to a file at creation time&do$\_$sys$\_$open\\ \hline
+	 mv &The new file keeps tag information&rename\\ \hline
+	 cp &The new file copies tag information from the old one&unlink\\ \hline
+	 tag -l &TagFS new command for listing tags associated to a file&-\\
+     \hline
+	\end{tabular}
+	\end{center}
+	\caption{Ls syscalls}
+	\label{table:ls}
+	\end{table}
+\end{center}
+
 Possible future work:
 In a pure tag file system, the disk mechanism could be improved in the following way:
 We know that tags can be added to some files, we have no hierarchical structure of the files.
@@ -765,12 +810,16 @@ and could be easily displayed of graphical file browsers.
 The current implementation, where we add hooks in the kernel syscall so that existing applications
 can use TagFS, can be augmented by adding new syscalls or fcntl options so that new application can use the
 system better.
-
+\newpage
 \begin{thebibliography}{1}
 	\bibitem SStephan Bloehdorn and Max Volkel,Tagfs-tag semantics for hierarchical file systems, 
 	\bibitem YYuan-Liang Tai1, Shang-Rong Tsai, Guang-Hung Huang, Chia-Ming Lee,
 Lian-Jou Tsai, Kuo-Feng Ssu and Shou-Jen Wey, A Label-Based File System
     \bibitem NNepomuk-KDE \url{http://nepomuk.kde.org/}
+    \bibitem TTaggedFron \url{http://lunarfrog.com/}
+    \bibitem ppyTAGSfs \url{http://www.pytagsfs.org/}
+    \bibitem TTagFS: Bringing Semantic Metadata to the Filesystem \url{http://www.eswc2006.org/poster-papers/FP31-Schenk.pdf/}
+
 \end{thebibliography}
 
 % that's all folks
