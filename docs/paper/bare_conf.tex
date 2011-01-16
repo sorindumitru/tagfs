@@ -739,7 +739,8 @@ The test platform is represented by Fedora 14 OS with a 2.6.35.10 kernel
 compiled with the changes for TagFS.
 At the moment \textit{ls} command is the only Unix-based one hacked to allow 
 the use of tags and three TagFS commands (tag -c tag -a, tag -d) are fully 
-implemented and tested.
+implemented and tested. We started with it because it was the most important, the main use
+of the tags is searching by them, and because of lack of time we didn't get to implement other commands.
 
 A first test scenario was to add tags to a file and browse the file based on 
 one or more of its associated tags
