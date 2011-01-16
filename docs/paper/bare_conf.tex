@@ -7,6 +7,7 @@
 \end{figure}
 }
 
+
 % bare_conf.tex
 %% V1.3
 %% 2007/01/11
@@ -137,6 +138,7 @@
 %\usepackage[absolute,overlay]{textpos}
 \usepackage[pdftex]{graphicx}
 \usepackage{url}
+\usepackage{multirow}
 \ifCLASSINFOpdf
   % \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
@@ -686,8 +688,27 @@ so that normal operations will work as expected( E.g doing ls
 dir:tag would try to open the ﬁle ”dir:tag” but the ﬁle does
 not exist so it would fail. Because of this, it is necessary to
 strip the tags). After this they will continue to do operation
-speciﬁc things. For example a getdenst call will list the ﬁles
-associated with the provided tags.
+speciﬁc things.
+
+To determine where we would need to insert our hooks, we did a strace
+on a command and checked what syscalls it makes. For example for a "ls dir"
+command:
+\begin{center}
+	\begin{table}[htb]
+	\begin{center}
+	\begin{tabular}{ | p{2.5cm} | p{4.5cm} | }
+	\hline
+	\textbf{Syscall}&\textbf{Action}\\ \hline
+	fstat64(path) & Remove tags from path\\ \hline
+	open(path) & Remove tags from path and make association between $<$process, fd$>$ and tags\\ \hline
+	getdents64(fd) & Get the tags associated with the fd and search the storage. Store the results in the dents structure passed from userspace.\\ \hline
+	close(fd) & Remove the association between fd and tags\\ \hline
+	\end{tabular}
+	\end{center}
+	\caption{Ls syscalls}
+	\label{table:ls}
+	\end{table}
+\end{center}
 
 \subsubsection{Userspace application} 
 $\\$ The application in userspace adds the tag layer to the normal
