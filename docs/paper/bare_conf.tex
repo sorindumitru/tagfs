@@ -762,6 +762,10 @@ Given the fact that Linux implements Extended Attributes(also called xattrs) whi
 associated with files as an extension to normal inode-based attributes, tags could be inserted in xattrs
 and could be easily displayed of graphical file browsers.
 
+The current implementation, where we add hooks in the kernel syscall so that existing applications
+can use TagFS, can be augmented by adding new syscalls or fcntl options so that new application can use the
+system better.
+
 \begin{thebibliography}{1}
 	\bibitem SStephan Bloehdorn and Max Volkel,Tagfs-tag semantics for hierarchical file systems, 
 	\bibitem YYuan-Liang Tai1, Shang-Rong Tsai, Guang-Hung Huang, Chia-Ming Lee,
