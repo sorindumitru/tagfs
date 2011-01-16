@@ -551,18 +551,18 @@ a later time, adding and removing tags, listing the tags associated to a file
 at a given time and, the most important characteristic, TagFS allows
 browsing for files having specific tag(s).
 
-The filesystem hierarchy whill remain unchanged but files will have
+What is different from the other implementations is that the filesystem hierarchy whill remain unchanged but files will have
 associated tags (an example is presented in \figref{img:hierarchy}).
 \fig[scale=0.5]{figs/hierarchy.pdf}{img:hierarchy}{TagFS hierarchy}
 
 The TagFS application architecture is presented in \figref{arch}. 
 \fig[scale=0.5]{figs/archall.pdf}{arch}{TagFS architecture}
-The \textit{CLI} is used to issue commands for tag manipulation. There are two types
+The \textit{CLI} is used to issue commands for tag manipulation. In order for the transition to this new file system to be as user-friendly as possible, we've implemented a different way of manipulating the tags. There are two types
 of commands. The first type consists of file manipulation commands available on 
 every Unix-like operating system, such as \textit{ls, touch, mv, cp} whose behaviour 
-and implementation was changed in TagFS implementation in order to support tags. 
+and implementation was slightly changed in TagFS implementation in order to support tags. 
 The second type of commands reffers to new TagFS commands implemented in order to 
-provide more tag-related operations.  
+provide more tag-related operations - list, remove, add new tags.  
 The implementation changes are related to hooks created in \textit{VFS} and will be detailed in 
 subsection \textit{Tag handling}. 
 No implementation changes at filesystem level were required.
@@ -584,7 +584,7 @@ level and not on storage possibilities of the mappings between files and
 associated tags and so these mappings are stored in a file which is always in RAM memory.
 $\\$
 The keyword of entry point was defined in order to designate a point in the file system
-hierarchy starting from which a distinct TagFS begins meaning that only for that part of
+hierarchy starting from which a distinct TagFS begins, meaning that only for that part of
 the file system tags apply; for a file system multiple entry points can be declared.
 \todo{Sorin is this assumption correct?}
       
@@ -674,6 +674,17 @@ and required arguments, new command types have been defined for fcntl for TagFS 
 From fcntl syscall other kernel-level tag specific functions are called.
 \todo{sorin, fie zici aici de functiile noi fie daca le-ai amintit la VFS hooks zici
 ca sunt cele de mai sus}
+
+\section{Experimental results}
+$\\$
+Because of the way TagFS is implemented there will be two major testing scenarios. The first scenario will consist of testing the unix-based commands, while the second one will test the tag manipulation commands. There may be an extra scenario for performance testing, but this is not the scope of this article as the main goal of TagFS is to prove that a tag based file system is implementable and is more intuitiv than the hierarchical one.
+The testing process will be concluded by executing a series of commands, noting the output of the commands and comparing it with the expected results. 
+\subsection{Unix-based commands} 
+\todo{testare comenzi unix}
+
+
+\subsection{TagFS commands} 
+\todo{testare comenzi tagfs}
 
 \section{Conclusion}
 

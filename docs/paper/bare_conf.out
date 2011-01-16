@@ -1,0 +1,19 @@
+\BOOKMARK [1][-]{section.1}{I Introduction}{}
+\BOOKMARK [1][-]{section.2}{II State of the art}{}
+\BOOKMARK [2][-]{subsection.2.1}{II-A Nepomuk-KDE}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{II-B TaggedFrog}{section.2}
+\BOOKMARK [2][-]{subsection.2.3}{II-C pyTAGSfs}{section.2}
+\BOOKMARK [2][-]{subsection.2.4}{II-D Other Projects}{section.2}
+\BOOKMARK [1][-]{section.3}{III Tagfs}{}
+\BOOKMARK [2][-]{subsection.3.1}{III-A Architectural decisions}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{III-B Storage}{section.3}
+\BOOKMARK [2][-]{subsection.3.3}{III-C Tag commands}{section.3}
+\BOOKMARK [2][-]{subsection.3.4}{III-D Implementation details}{section.3}
+\BOOKMARK [3][-]{subsubsection.3.4.1}{III-D1 medatada}{subsection.3.4}
+\BOOKMARK [3][-]{subsubsection.3.4.2}{III-D2 VFS Hooks}{subsection.3.4}
+\BOOKMARK [3][-]{subsubsection.3.4.3}{III-D3 Userspace application}{subsection.3.4}
+\BOOKMARK [1][-]{section.4}{IV Experimental results}{}
+\BOOKMARK [2][-]{subsection.4.1}{IV-A Unix-based commands}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{IV-B TagFS commands}{section.4}
+\BOOKMARK [1][-]{section.5}{V Conclusion}{}
+\BOOKMARK [1][-]{section*.1}{References}{}

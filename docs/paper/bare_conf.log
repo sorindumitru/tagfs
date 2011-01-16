@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.10)  12 JAN 2011 02:41
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.1.15)  16 JAN 2011 02:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,7 +6,13 @@ entering extended mode
 (./bare_conf.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, loaded.
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
 (./IEEEtran.cls
 Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
@@ -95,7 +101,8 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box27
 \fn@width=\dimen117
-) (./perpage.sty
+)
+(/usr/share/texmf-texlive/tex/latex/bigfoot/perpage.sty
 Package: perpage 2006/07/15 1.12 Reset/sort counters per page
 \c@abspage=\count91
 )
@@ -315,7 +322,7 @@ LaTeX Info: Redefining \pageref on input line 362.
 \openout3 = `bare_conf.out'.
 
 \AtBeginShipoutBox=\box30
- (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+ (/usr/share/texmf/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
 \scratchdimen=\dimen127
@@ -355,10 +362,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 538--545
 
  []
 
-<figs/hierarchy.pdf, id=89, 410.42902pt x 131.482pt>
+<figs/hierarchy.pdf, id=101, 410.42902pt x 131.482pt>
 File: figs/hierarchy.pdf Graphic file (type pdf)
  <use figs/hierarchy.pdf>
-<figs/archall.pdf, id=93, 368.38042pt x 133.2138pt>
+<figs/archall.pdf, id=105, 368.38042pt x 133.2138pt>
 File: figs/archall.pdf Graphic file (type pdf)
  <use figs/archall.pdf>
 Underfull \hbox (badness 2469) in paragraph at lines 571--590
@@ -372,7 +379,7 @@ Underfull \hbox (badness 2065) in paragraph at lines 571--590
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 571--590
-\OT1/ptm/m/n/10 from which a dis-tinct TagFS be-gins mean-ing that
+\OT1/ptm/m/n/10 from which a dis-tinct TagFS be-gins, mean-ing that
  []
 
 
@@ -399,7 +406,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 571--590
 
 pdfTeX warning: pdflatex (file ./figs/storage.pdf): PDF inclusion: found PDF ve
 rsion <1.5>, but at most version <1.4> allowed
-<figs/storage.pdf, id=97, 642.4pt x 481.8pt>
+<figs/storage.pdf, id=109, 642.4pt x 481.8pt>
 File: figs/storage.pdf Graphic file (type pdf)
  <use figs/storage.pdf>
 Overfull \hbox (4.95544pt too wide) in paragraph at lines 593--593
@@ -483,36 +490,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 665--677
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 680--693
-\OT1/ptm/m/n/10 Given the fact that Linux im-ple-ments Ex-tended
+Overfull \hbox (197.79146pt too wide) in paragraph at lines 683--684
+[][][][][][][]
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 680--693
-\OT1/ptm/m/n/10 as-so-ci-ated with files as an ex-ten-sion to nor-mal inode-
+Underfull \hbox (badness 10000) in paragraph at lines 683--684
+
  []
 
 
-Underfull \hbox (badness 3128) in paragraph at lines 680--693
-\OT1/ptm/m/n/10 based at-tributes, tags could be in-serted in xat-trs and
+Overfull \hbox (197.79146pt too wide) in paragraph at lines 687--688
+[][][][][][][]
  []
 
 
-Underfull \hbox (badness 4556) in paragraph at lines 680--693
-\OT1/ptm/m/n/10 could be eas-ily dis-played of graph-i-cal file browsers.
- []
-
-
-Overfull \hbox (187.79146pt too wide) in paragraph at lines 680--693
-[][][][][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 680--693
+Underfull \hbox (badness 10000) in paragraph at lines 687--688
 
  []
 
 [3 <./figs/storage.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 691--704
+\OT1/ptm/m/n/10 Given the fact that Linux im-ple-ments Ex-tended
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 691--704
+\OT1/ptm/m/n/10 as-so-ci-ated with files as an ex-ten-sion to nor-mal inode-
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 691--704
+\OT1/ptm/m/n/10 based at-tributes, tags could be in-serted in xat-trs and
+ []
+
+
+Underfull \hbox (badness 4556) in paragraph at lines 691--704
+\OT1/ptm/m/n/10 could be eas-ily dis-played of graph-i-cal file browsers.
+ []
+
+
+Overfull \hbox (187.79146pt too wide) in paragraph at lines 691--704
+[][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 691--704
+
+ []
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -528,21 +554,21 @@ Before submitting the final camera ready copy, remember to:
 
 ] (./bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
- 6196 strings out of 495061
- 93686 string characters out of 1182620
- 175658 words of memory out of 3000000
- 9273 multiletter control sequences out of 15000+50000
+ 6203 strings out of 493848
+ 93869 string characters out of 1152823
+ 177166 words of memory out of 3000000
+ 9375 multiletter control sequences out of 15000+50000
  41431 words of font info for 75 fonts, out of 3000000 for 9000
- 31 hyphenation exceptions out of 8191
- 45i,9n,37p,268b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 717 hyphenation exceptions out of 8191
+ 45i,9n,37p,458b,309s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</us
 r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
 mf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/typ
 e1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (4 pages, 115829 bytes).
+Output written on bare_conf.pdf (4 pages, 117922 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 144 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
+ 168 words of extra memory for PDF output out of 10000 (max. 10000000)
 
