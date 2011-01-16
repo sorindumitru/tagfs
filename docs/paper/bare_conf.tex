@@ -465,7 +465,7 @@ File systems, Tags, VFS, metadata
 In most operating systems the files are hierarchically organized. 
 This means that there usually is a starting point, or parent directory. 
 In Windows based systems there are multiple starting points 
-based on the physical hard drive partitions. In Unix-like systems, 
+based on the physical hard drive partitions. In UNIX-like systems, 
 there is a single root drive with different mount points available for users
 to add or remove subtrees from different drives, partitions, etc. 
 In these filesystems a user organizes related data by storing it in the same 
@@ -572,7 +572,7 @@ The \textit{CLI} is used to issue commands for tag manipulation. In order for th
 to this new file system to be as user-friendly as possible, we have implemented a different 
 way of manipulating the tags. There are two types
 of commands. The first type consists of file manipulation commands available on 
-every Unix-like operating system, such as \textit{ls, touch, mv, cp} whose behaviour 
+every UNIX-like operating system, such as \textit{ls, touch, mv, cp} whose behaviour 
 and implementation was slightly changed in TagFS implementation in order to support tags. 
 The second type of commands reffers to new TagFS commands implemented in order to 
 provide more tag-related operations - list, remove, add new tags.  
@@ -739,7 +739,7 @@ deleting tags, searching and creating entry points.
 \section{Experimental results}
 $\\$
 Because of the way TagFS is implemented there will be two major testing scenarios. 
-The first scenario will consist of testing the unix-based commands, while the second 
+The first scenario will consist of testing the UNIX-based commands, while the second 
 one will test the tag manipulation commands. There may be an extra scenario for 
 performance testing, but this is not the scope of this article as the main goal of TagFS 
 is to prove that a tag based file system is implementable and it is more intuitive than the hierarchical one.
@@ -747,7 +747,7 @@ The testing process will be concluded by executing a series of commands, noting 
 \\
 The test platform is represented by Fedora 14 OS with a 2.6.35.10 kernel 
 compiled with the changes for TagFS.
-At the moment the \textit{ls} command is the only Unix-based command hacked to allow 
+At the moment the \textit{ls} command is the only UNIX-based command hacked to allow 
 the use of tags and three TagFS commands (tag -c tag -a, tag -d) are fully 
 implemented and tested. We started with \textit{ls} because it is the command
 with the most importance, the main use
