@@ -371,7 +371,7 @@
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Catalina Macalet}
+\author{\IEEEauthorblockN{C\u{a}t\u{a}lina Macale\c{t}}
 \IEEEauthorblockA{Computer Science Department\\
 Politehnica University of Bucharest\\
 Email: catalina.macalet@cti.pub.ro}
@@ -437,9 +437,11 @@ Also, the need of users to personalize the content stored and
 to find specific data, pushes manufacturers to employ alternatives for the 
 curent design.
 
-TagFS implements a tag based file system in Linux which offers support for 
-tagging files and browsing files by tags.
-
+TagFS implements a tag based file system in Linux, using a user space application
+ which offers support for tagging files and browsing files by tags, 
+and a kernel module that hooks into the VFS to keep metadata about files. 
+We present a simple way to implement such a system and how the regular user can benefit 
+from file tagging.
 \end{abstract}
 % keywords
 
@@ -494,7 +496,7 @@ In our approach, logical directory based organization and file tags coexist, in 
 to see how the two systems can fit and how the user can use alternatives for searching
 and clustering the information it has. 
 We implemented a tag layer in the Linux Virtual File System and tested how this impacts 
-the regular user. We've added posibilities for the user to manipulate the tags (add, delete,
+the regular user. We have added posibilities for the user to manipulate the tags (add, delete,
  search) in order to increase the flexibility of the filesystem and the way it interacts with the user.
 TagFS is expected to make it easier to work with files, especially personal ones.
 
@@ -509,7 +511,7 @@ TagFS is expected to make it easier to work with files, especially personal ones
 
 The idea of tagging files in order to access them in an easier fashion is not
 a new one and various attempts to implement solutions have been made. Some of
-these are specialized solutions for special kind of data, such as Calibre
+these are specialized solutions for special kind of data, such as Calibre\footnote{\url{http://calibre-ebook.com/}}
 which makes ebook management easier, implemented in userspace. The vast majority
 of these applications rely on a database where mappings between files and 
 associated metadata are stored and expose a set of commands which translate
@@ -566,7 +568,9 @@ associated tags (an example is presented in \figref{img:hierarchy}).
 
 The TagFS application architecture is presented in \figref{arch}. 
 \fig[scale=0.5]{figs/archall.pdf}{arch}{TagFS architecture}
-The \textit{CLI} is used to issue commands for tag manipulation. In order for the transition to this new file system to be as user-friendly as possible, we've implemented a different way of manipulating the tags. There are two types
+The \textit{CLI} is used to issue commands for tag manipulation. In order for the transition 
+to this new file system to be as user-friendly as possible, we have implemented a different 
+way of manipulating the tags. There are two types
 of commands. The first type consists of file manipulation commands available on 
 every Unix-like operating system, such as \textit{ls, touch, mv, cp} whose behaviour 
 and implementation was slightly changed in TagFS implementation in order to support tags. 
@@ -579,9 +583,10 @@ No implementation changes at filesystem level were required.
 \subsection{Architectural decisions}
 TagFS started as an idea to create a more user-friendly file system; remembering
 tags is easier than remembering the name of a file or the place where it is stored
-but, at the same time a pure tag filesystem would offer no simple way of organizing data 
+but, at the same time a pure tag filesystem might not offer a simpler way of organizing data
 in a hierarchical manner, a choice to implement TagFS as a new filesystem, from 
-scratch, thus would have been pointless.
+scratch, thus would have been time consuming and would have required a lot of changes into
+ the kernel and user interface.
 The other choice was to implement TagFS as hooks in
 VFS in order to store and retrieve needed metadata.
 Since changes are made at VFS level there will be an overhead for filesystems that
@@ -606,11 +611,11 @@ deﬁned.
 The mapping between a file and its associated tags is presented in \figref{storage}.
 \fig[scale=0.4]{figs/storage.pdf}{storage}{Tag Storage}
 Each file contains a bitmask in which each bit represents a tag. If the bit is set to 1 than
-the file has the tag with that id and if not it doesn't. The bitmask is static so we will only
+the file has the tag with that id and if not it does not. The bitmask is static so we will only
 be able to have only a limited number of tags. This defaults to 8192 tags but it is configurable
 through the kernel config file with impact on the memory and disk space used.
 
-Each tag has a list of file pointers to files which have that tag. This is done so we don't
+Each tag has a list of file pointers to files which have that tag. This is done so we do not
 have duplicated information and so that we will need to do updates in only one place.
 
 \subsection{Tag commands}
@@ -733,7 +738,11 @@ deleting tags, searching and creating entry points.
 
 \section{Experimental results}
 $\\$
-Because of the way TagFS is implemented there will be two major testing scenarios. The first scenario will consist of testing the unix-based commands, while the second one will test the tag manipulation commands. There may be an extra scenario for performance testing, but this is not the scope of this article as the main goal of TagFS is to prove that a tag based file system is implementable and is more intuitiv than the hierarchical one.
+Because of the way TagFS is implemented there will be two major testing scenarios. 
+The first scenario will consist of testing the unix-based commands, while the second 
+one will test the tag manipulation commands. There may be an extra scenario for 
+performance testing, but this is not the scope of this article as the main goal of TagFS 
+is to prove that a tag based file system is implementable and it is more intuitive than the hierarchical one.
 The testing process will be concluded by executing a series of commands, noting the output of the commands and comparing it with the expected results. 
 \\
 The test platform is represented by Fedora 14 OS with a 2.6.35.10 kernel 
@@ -762,7 +771,6 @@ $ tag -d tag_test:soa
 $ ls :fs:soa:tag
 $
 \end{lstlisting}
- $\\\\\\$
 A second test scenario is having more tagged files and to browse by various
  combinations of these tags.
 \begin{lstlisting}
