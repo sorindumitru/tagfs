@@ -605,12 +605,13 @@ deﬁned.
 \subsection{Storage}
 The mapping between a file and its associated tags is presented in \figref{storage}.
 \fig[scale=0.4]{figs/storage.pdf}{storage}{Tag Storage}
-Actually it maps tags to files and this is because not necessary all files from a TagFS
-have tags associated.
-Since a file can be tagged more than once, for every tag a list of pointers to
-files is stored rather than actual files.
-The implementation details are presented in a separate section later in this
-paper.
+Each file contains a bitmask in which each bit represents a tag. If the bit is set to 1 than
+the file has the tag with that id and if not it doesn't. The bitmask is static so we will only
+be able to have only a limited number of tags. This defaults to 8192 tags but it is configurable
+through the kernel config file with impact on the memory and disk space used.
+
+Each tag has a list of file pointers to files which have that tag. This is done so we don't
+have duplicated information and so that we will need to do updates in only one place.
 
 \subsection{Tag commands}
 The idea of tagging files is to be able to add a number of tags to a file but
