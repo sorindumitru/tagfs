@@ -733,13 +733,18 @@ deleting tags searching and creating entry points.
 $\\$
 Because of the way TagFS is implemented there will be two major testing scenarios. The first scenario will consist of testing the unix-based commands, while the second one will test the tag manipulation commands. There may be an extra scenario for performance testing, but this is not the scope of this article as the main goal of TagFS is to prove that a tag based file system is implementable and is more intuitiv than the hierarchical one.
 The testing process will be concluded by executing a series of commands, noting the output of the commands and comparing it with the expected results. 
-\subsection{Unix-based commands} 
-\todo{testare comenzi unix}
+\\
+The test platform is represented by Fedora 14 OS with a 2.6.35.10 kernel 
+compiled with the changes for TagFS.
+At the moment \textit{ls} command is the only Unix-based one hacked to allow 
+the use of tags and three TagFS commands (tag -c tag -a, tag -d) are fully 
+implemented and tested.
 
+A first test scenario was to add tags to a file and browse the file based on 
+one or more of its associated tags
 
-\subsection{TagFS commands} 
-\todo{testare comenzi tagfs}
-
+A second test scenario is having more tagged files and to browse by various
+ combinations of these tags.
 \section{Conclusion}
 
 $\\$
@@ -754,7 +759,6 @@ $\\ \\$
 Given the fact that Linux implements Extended Attributes(also called xattrs) which are name/value pairs 
 associated with files as an extension to normal inode-based attributes, tags could be inserted in xattrs
 and could be easily displayed of graphical file browsers.
-\todo{nu e file browsers, e altceva da e prea tarziu}
 
 \begin{thebibliography}{1}
 	\bibitem SStephan Bloehdorn and Max Volkel,Tagfs-tag semantics for hierarchical file systems, 
