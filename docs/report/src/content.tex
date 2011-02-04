@@ -74,8 +74,8 @@ of these applications rely on a database where mappings between files and
 associated metadata are stored and expose a set of commands which translate
 to specific queries for the database.  
 
-\subsection[Nepomuk-KDE]{Nepomuk-KDE\cite{nepomuk}}
-Nepomuk-KDENepomuk-KDE is an implementation of Nepomuk which
+\subsection[Nepomuk-KDE]{Nepomuk-KDE}
+Nepomuk-KDE\cite{nepomuk} is an implementation of Nepomuk which
 has been integrated with KDE and that allows adding metadata
 to items stored on a computer and making queries based on
 that metadata. Based on the Nepomuk specification, Nepomuk-
@@ -341,7 +341,7 @@ tag_test  untagged
 \end{lstlisting}
 
 We wanted to have little impact on the normal performance of the kernel,
-that's why we introduced the entry points. Because of them, each vfs syscall
+that is why we introduced the entry points. Because of them, each vfs syscall
 will only have an overhead of a few string compares. To test the performance
 is still ok we did a kernel build while running the tagSys modified kernel.
 Performance differences where very little, 10-20 seconds in average. Because
@@ -349,7 +349,12 @@ building the kernel stresses the filesystem very much, we are positive that
 the performance in normal cases is still very good.
 
 \section{Conclusion}
-
+tagSys can be a huge step towards a different-organized file system for end-users due to its little overhead,
+ good performance and usability.
+ 
+ Changes in the core kernel code are hidden behind a kernel config(CONFIG_TAGFS) so it can be turned off.
+ Pushing upstream could make it more usefull aswell as maybe getting a better interface to the filesystem, but the persistent storage is something that is usually not accepted in the vanilla kernel. 
+  
 $\\$
 There are still a couple of common UNIX commands whose behaviour we want to 
 modify in order to issue them with tags. Also we would like to add a tag-specific command for listing
