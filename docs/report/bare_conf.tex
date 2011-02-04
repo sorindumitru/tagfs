@@ -408,6 +408,15 @@ $ tag -a tag_test:second:soa:test
 $ ls :soa:test
 tag_test  untagged
 \end{lstlisting}
+
+We wanted to have little impact on the normal performance of the kernel,
+that's why we introduced the entry points. Because of them, each vfs syscall
+will only have an overhead of a few string compares. To test the performance
+is still ok we did a kernel build while running the tagfs modified kernel.
+Performance differences where very little, 10-20 seconds in average. Because
+building the kernel stresses the filesystem very much, we are positive that
+the performance in normal cases is still very good.
+
 \section{Conclusion}
 
 $\\$
